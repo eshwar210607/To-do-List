@@ -1,0 +1,164 @@
+:root {
+    --bg: #222;
+    --primary: #fff;
+    --accent: #ff00cc;
+    --button: #00ffea;
+    --done: #00ff7f;
+    --transition: 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+body {
+    background: var(--bg);
+    color: var(--primary);
+    font-family: 'Segoe UI', sans-serif;
+    transition: background var(--transition), color var(--transition);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    background: rgba(0,0,0,0.7);
+    padding: 2rem 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    text-align: center;
+    width: 350px;
+}
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px var(--accent);
+}
+.theme-switcher {
+    margin-bottom: 1.5rem;
+}
+.todo-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+#todoInput {
+    flex: 1;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background: #333;
+    color: var(--primary);
+    transition: background var(--transition);
+}
+.animated-btn {
+    background: var(--button);
+    color: #222;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px var(--accent);
+    transition: transform 0.2s, background var(--transition), color var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+.animated-btn:hover {
+    transform: scale(1.08) rotate(-2deg);
+    background: var(--accent);
+    color: #fff;
+}
+.animated-btn:active {
+    transform: scale(0.95) rotate(2deg);
+}
+#todoList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.theme-options {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    transition: opacity var(--transition);
+}
+.theme-option {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    transition: background var(--transition), color var(--transition), border var(--transition);
+}
+.theme-option.selected,
+.theme-option:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--button);
+    transform: scale(1.08);
+}
+.todo-item {
+    background: #333;
+    margin-bottom: 0.7rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background var(--transition), color var(--transition);
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px var(--accent);
+}
+.todo-item.done {
+    text-decoration: line-through;
+    color: var(--done);
+    background: #222;
+    opacity: 0.7;
+}
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color var(--transition), transform 0.2s;
+}
+.delete-btn:hover {
+    color: var(--button);
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* Theme 2 */
+.theme-2 {
+    --bg: #1a0033;
+    --primary: #fffd82;
+    --accent: #ff29a8;
+    --button: #00e1ff;
+    --done: #fffd82;
+}
+/* Theme 3 */
+.theme-3 {
+    --bg: #002b36;
+    --primary: #b58900;
+    --accent: #2aa198;
+    --button: #cb4b16;
+    --done: #859900;
+}
+/* Theme 4 */
+.theme-4 {
+    --bg: #ff5e62;
+    --primary: #fff;
+    --accent: #ff9966;
+    --button: #ffcc70;
+    --done: #00c3ff;
+}
+.todo-checkbox {
+    accent-color: var(--accent);
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.7em;
+    cursor: pointer;
+    transition: accent-color var(--transition);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Moved this line inside head -->
+    <title>Crazy Color Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🌈 Crazy Color Todo List</h1>
+        <div class="theme-switcher">
+            <button id="themeBtn" class="animated-btn">Switch Theme</button>
+            <div id="themeOptions" class="theme-options" style="display:none;">
+                <button class="theme-option animated-btn" data-theme="0">Theme 1</button>
+                <button class="theme-option animated-btn" data-theme="1">Theme 2</button>
+                <button class="theme-option animated-btn" data-theme="2">Theme 3</button>
+                <button class="theme-option animated-btn" data-theme="3">Theme 4</button>
+            </div>
+        </div>
+        <div class="todo-input">
+            <input type="text" id="todoInput" placeholder="Add a new task...">
+            <button id="addBtn" class="animated-btn">Add</button>
+        </div>
+        <ul id="todoList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
